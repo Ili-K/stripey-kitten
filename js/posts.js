@@ -10,48 +10,48 @@
  */
 window.BLOG_POSTS = [
   {
-    slug: "arkadia",
-    title: "Andrea Grützner | Arkadia",
-    date: "2026-06-01", // Sample sorting date; replace with the real date.
-    dateLabel: "",
-    image: "./assets/images/arkadia.jpg",
-    imageAlt: "Colourful, abstract artwork with overlapping lines",
+    slug: "niigata",
+    title: "Niigata",
+    date: "2026-10-13", // Sample sorting date; replace with the real date.
+    dateLabel: "Oct 13, 2026",
+    image: "./assets/images/DSC_2730.JPG",
+    imageAlt: "Two butterflies hanging beneath a branch of white flowers",
     content: [
       "Replace this sample text with the text of your post.",
       "To add another paragraph, add another string to this content array. You can also remove this paragraph if your post is shorter."
     ]
   },
   {
-    slug: "the-same-is-dissimilar",
-    title: "The same is dissimilar, the different similar / Das Gleiche ist anders, das Andere ist gleich",
-    date: "2026-03-27",
-    dateLabel: "Mar 27 – May 16, 2026",
-    image: "./assets/images/dissimilar.jpg",
-    imageAlt: "A sunlit outdoor scene with a dark metal frame",
+    slug: "tadami-yurari",
+    title: "Tadami, Yurari",
+    date: "2026-10-12",
+    dateLabel: "Oct 12, 2026", // Sample sorting date; replace with the real date.
+    image: "./assets/images/DSC_2578.JPG",
+    imageAlt: "River winding through a forested mountain valley",
     content: [
       "Replace this sample text with the text of your post.",
       "Add as many paragraphs as you need in the content array in js/posts.js."
     ]
   },
   {
-    slug: "tres-viajes",
-    title: "Jörg Brüggemann | Tres Viajes",
-    date: "2026-02-01", // Sample sorting date; replace with the real date.
-    dateLabel: "",
-    image: "./assets/images/tres-viajes.jpg",
-    imageAlt: "Two dogs playfully facing each other in black and white",
+    slug: "nikko-ii",
+    title: "Nikko II",
+    date: "2026-10-11", // Sample sorting date; replace with the real date.
+    dateLabel: "Oct 11, 2026",
+    image: "./assets/images/DSC_2349.JPG",
+    imageAlt: "Red wooden shrine surrounded by greenery in Japan",
     content: [
       "Replace this sample text with the text of your post.",
       "The post page keeps the same header as the homepage and displays the image, title, date (if provided), and article text."
     ]
   },
   {
-    slug: "between-fields-and-spirits",
-    title: "Marco Maria Zanin | Between Fields and Spirits",
-    date: "2025-11-01",
-    dateLabel: "Nov 01 – Dec 20, 2025",
-    image: "./assets/images/between-fields.jpg",
-    imageAlt: "A monochrome exhibition space with artworks on plinths",
+    slug: "nikko",
+    title: "Nikko",
+    date: "2026-10-10", // Sample sorting date; replace with the real date.
+    dateLabel: "Oct 10, 2026",
+    image: "./assets/images/DSC_2098.JPG",
+    imageAlt: "Black-and-white close-up of a bee on a flower",
     content: [
       "Replace this sample text with the text of your post.",
       "You can use this field for a short article, notes about a project, or any other post content."
