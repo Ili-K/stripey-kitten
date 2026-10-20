@@ -181,7 +181,7 @@ a.pagination-button:focus-visible {
 
 .article {
   width: 100%;
-  max-width: 1120px; /* Two-thirds of the previous 1680px maximum. */
+  max-width: 747px; /* Two-thirds of the previous 1120px maximum. */
   margin: 0 auto;
 }
 
