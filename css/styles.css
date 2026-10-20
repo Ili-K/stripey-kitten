@@ -176,7 +176,8 @@ a.pagination-button:focus-visible {
 }
 
 .post-main {
-  padding: 20px 20px 64px;
+  /* Spacious on large screens, with gutters that shrink naturally on smaller windows. */
+  padding: clamp(28px, 4.5vw, 72px) clamp(24px, 6vw, 100px) 64px;
 }
 
 .article {
@@ -206,7 +207,8 @@ a.pagination-button:focus-visible {
 
 .article-image {
   display: block;
-  width: 100%;
+  /* Keep the image aligned with the title while giving it breathing room on desktop. */
+  width: 66.6667%;
   height: auto;
   max-height: none;
   object-fit: initial;
@@ -290,6 +292,17 @@ a.pagination-button:focus-visible {
   }
 }
 
+@media (max-width: 1100px) {
+  .post-main {
+    padding-right: clamp(22px, 4vw, 48px);
+    padding-left: clamp(22px, 4vw, 48px);
+  }
+
+  .article-image {
+    width: 82%;
+  }
+}
+
 @media (max-width: 760px) {
   :root {
     --page-gutter: 16px;
@@ -350,7 +363,11 @@ a.pagination-button:focus-visible {
   }
 
   .post-main {
-    padding: 32px 16px 48px;
+    padding: 28px 18px 48px;
+  }
+
+  .article-image {
+    width: 100%;
   }
 
   .article-title {
