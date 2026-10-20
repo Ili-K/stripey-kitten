@@ -176,17 +176,17 @@ a.pagination-button:focus-visible {
 }
 
 .post-main {
-  /* Spacious on large screens, with gutters that shrink naturally on smaller windows. */
-  padding: clamp(28px, 4.5vw, 72px) clamp(24px, 6vw, 100px) 64px;
+  padding: 52px 24px 64px;
 }
 
 .article {
   width: 100%;
-  max-width: none;
-  margin: 0;
+  max-width: 1680px;
+  margin: 0 auto;
 }
 
 .article-header {
+  width: 100%;
   margin: 0 0 28px;
   max-width: none;
 }
@@ -207,8 +207,8 @@ a.pagination-button:focus-visible {
 
 .article-image {
   display: block;
-  /* Keep the image aligned with the title while giving it breathing room on desktop. */
-  width: 66.6667%;
+  /* Use the article's full width; the article itself is centered and capped on wide screens. */
+  width: 100%;
   height: auto;
   max-height: none;
   object-fit: initial;
@@ -292,17 +292,6 @@ a.pagination-button:focus-visible {
   }
 }
 
-@media (max-width: 1100px) {
-  .post-main {
-    padding-right: clamp(22px, 4vw, 48px);
-    padding-left: clamp(22px, 4vw, 48px);
-  }
-
-  .article-image {
-    width: 82%;
-  }
-}
-
 @media (max-width: 760px) {
   :root {
     --page-gutter: 16px;
@@ -363,11 +352,7 @@ a.pagination-button:focus-visible {
   }
 
   .post-main {
-    padding: 28px 18px 48px;
-  }
-
-  .article-image {
-    width: 100%;
+    padding: 32px 16px 48px;
   }
 
   .article-title {
