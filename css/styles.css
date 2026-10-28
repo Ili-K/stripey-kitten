@@ -227,6 +227,23 @@ a.pagination-button:focus-visible {
   margin: 0 0 1.1em;
 }
 
+.article-figure {
+  margin: 28px 0;
+}
+
+.article-content-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.article-figure figcaption {
+  margin-top: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
 .article-back {
   max-width: 740px;
   margin: 38px auto 0;
