@@ -46,9 +46,9 @@ window.BLOG_POSTS = [
     ]
   },
   {
-    slug: "nikko",
-    title: "Nikko",
-    date: "2026-10-10", // Sample sorting date; replace with the real date.
+    slug: "nikko-i",
+    title: "Nikko I",
+    date: "2026-10-10", 
     dateLabel: "Oct 10, 2026",
     image: ".assets/images/Nikko I; Oct 10, 2026/DSC_2094.jpg",
     imageAlt: "Black-and-white close-up of a bee on a flower",
