@@ -101,82 +101,38 @@
   }
 
   function renderPost() {
-  const main = document.getElementById("post-content");
-  if (!main) return;
+    const main = document.getElementById("post-content");
+    if (!main) return;
 
-  const post = POSTS.find((item) => item.slug === requestedSlug);
+    const post = POSTS.find((item) => item.slug === requestedSlug);
+    if (!post) {
+      document.title = "Post not found | Stripey Kitten";
+      main.innerHTML = `
+        <section class="empty-state">
+          <h1>Post not found</h1>
+          <p>This post may have been moved or removed.</p>
+          <a href="./index.html">Back to all posts</a>
+        </section>`;
+      return;
+    }
 
-  if (!post) {
-    document.title = "Post not found | Stripey Kitten";
+    document.title = `${post.title} | Stripey Kitten`;
+    const date = post.dateLabel ? `<p class="article-date">${escapeHtml(post.dateLabel)}</p>` : "";
+    const paragraphs = Array.isArray(post.content)
+      ? post.content.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")
+      : "";
+
     main.innerHTML = `
-      <section class="empty-state">
-        <h1>Post not found</h1>
-        <p>This post may have been moved or removed.</p>
-        <a href="./index.html">Back to all posts</a>
-      </section>`;
-    return;
+      <article class="article">
+        <header class="article-header">
+          <h1 class="article-title">${escapeHtml(post.title)}</h1>
+          ${date}
+        </header>
+        <img class="article-image" src="${escapeHtml(post.image)}" alt="${escapeHtml(post.imageAlt || post.title)}">
+        <div class="article-content">${paragraphs}</div>
+        <p class="article-back"><a href="./index.html">← Back to all posts</a></p>
+      </article>`;
   }
-
-  document.title = `${post.title} | Stripey Kitten`;
-
-  const date = post.dateLabel
-    ? `<p class="article-date">${escapeHtml(post.dateLabel)}</p>`
-    : "";
-
-  const contentHtml = Array.isArray(post.content)
-    ? post.content.map((block) => {
-        if (typeof block === "string") {
-          return `<p>${escapeHtml(block)}</p>`;
-        }
-
-        if (
-          block &&
-          typeof block === "object" &&
-          block.type === "image" &&
-          typeof block.src === "string" &&
-          block.src.trim() !== ""
-        ) {
-          const caption =
-            typeof block.caption === "string" && block.caption.trim()
-              ? `<figcaption>${escapeHtml(block.caption)}</figcaption>`
-              : "";
-
-          return `
-            <figure class="article-figure">
-              <img
-                class="article-content-image"
-                src="${escapeHtml(block.src)}"
-                alt="${escapeHtml(block.alt || "")}"
-                loading="lazy"
-              >
-              ${caption}
-            </figure>`;
-        }
-
-        return "";
-      }).join("")
-    : "";
-
-  main.innerHTML = `
-    <article class="article">
-      <header class="article-header">
-        <h1 class="article-title">${escapeHtml(post.title)}</h1>
-        ${date}
-      </header>
-
-      <img
-        class="article-image"
-        src="${escapeHtml(post.image)}"
-        alt="${escapeHtml(post.imageAlt || post.title)}"
-      >
-
-      <div class="article-content">${contentHtml}</div>
-
-      <p class="article-back">
-        <a href="./index.html">← Back to all posts</a>
-      </p>
-    </article>`;
-}
 
   renderHeader();
   if (isPostPage) {
