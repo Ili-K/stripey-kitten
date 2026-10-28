@@ -46,11 +46,11 @@ window.BLOG_POSTS = [
     ]
   },
   {
-    slug: "nikko-i",
-    title: "Nikko I",
-    date: "2026-10-10", 
+    slug: "nikko",
+    title: "Nikko",
+    date: "2026-10-10", // Sample sorting date; replace with the real date.
     dateLabel: "Oct 10, 2026",
-    image: ".assets/images/Nikko I; Oct 10, 2026/DSC_2094.jpg",
+    image: "./assets/images/DSC_2098.JPG",
     imageAlt: "Black-and-white close-up of a bee on a flower",
     content: [
       "Replace this sample text with the text of your post.",
